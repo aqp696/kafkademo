@@ -7,6 +7,9 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 
+/**
+ * The type Producer.
+ */
 @Service
 public class Producer {
 
@@ -16,6 +19,11 @@ public class Producer {
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
+    /**
+     * Send message.
+     *
+     * @param message the message
+     */
     public void sendMessage(String message) {
         logger.info(String.format("$$ -> Producing message --> %s", message));
         this.kafkaTemplate.send(TOPIC, message);

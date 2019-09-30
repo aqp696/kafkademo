@@ -16,6 +16,8 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<okhttp.version>2.7.5</okhttp.version>
+		<unirest.version>1.4.9</unirest.version>
 	</properties>
 
 	<dependencies>
@@ -26,6 +28,20 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp -->
+		<dependency>
+			<groupId>com.squareup.okhttp</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>${okhttp.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java -->
+		<dependency>
+			<groupId>com.mashape.unirest</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>${unirest.version}</version>
 		</dependency>
 
 		<dependency>
